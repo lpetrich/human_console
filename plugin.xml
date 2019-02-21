@@ -1,0 +1,17 @@
+<library path="src">
+  <class name="UDPGui" type="human_console.udp_gui_plugin.UDPGuiPlugin" base_class_type="rqt_gui_py::Plugin">
+    <description>
+    Display for uncalibrated visual servoing of WAM.
+    </description>
+    <qtgui>
+      <group>
+        <label>Visualization</label>
+        <icon type="theme">folder</icon>
+        <statustip>Plugins related to visualization.</statustip>
+      </group>
+      <label>UDP GUI</label>
+      <icon type="theme">video-display</icon>
+      <statustip>UDP GUI</statustip>
+    </qtgui>
+  </class>
+</library>
