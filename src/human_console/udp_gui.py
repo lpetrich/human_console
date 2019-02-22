@@ -69,6 +69,7 @@ class UDPGuiWidget(QWidget):
 		layout = QHBoxLayout()
 		grasp_layout = QHBoxLayout()
 		step_layout = QVBoxLayout()
+		rhs_layout = QVBoxLayout()
 		msgs = []
 		for i in range(5):
 			m = QLabel()
@@ -86,6 +87,12 @@ class UDPGuiWidget(QWidget):
 		title_msg.setStyleSheet("font-size: 36px")
 		title_msg.setAlignment(Qt.AlignCenter)
 		title_msg.setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Expanding)
+		title_msg2 = QLabel()
+		title_msg2.setText("University of Alberta")
+		title_msg2.setWordWrap(True)
+		title_msg2.setStyleSheet("font-size: 28px; color: rgba(0, 102, 0, 100%)")
+		title_msg2.setAlignment(Qt.AlignCenter)
+		title_msg2.setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Expanding)
 		# MESSAGES
 		msgs[0].setText("Step 1: Coarse Target Selection")
 		msgs[1].setText("Click once in the image to select a target")
@@ -157,9 +164,12 @@ class UDPGuiWidget(QWidget):
 		step_layout.addWidget(self.cb8)
 		# step1_layout.addWidget(reset_button)
 		layout.addLayout(step_layout)
-		layout.addWidget(self._view)
+		rhs_layout.addWidget(cb0)
+		rhs_layout.addWidget(self._view)
+		layout.addLayout(rhs_layout)
 		l.addWidget(title_msg)
-		l.addWidget(cb0)
+		l.addWidget(title_msg2)
+		# l.addWidget(cb0)
 		l.addLayout(layout)
 		l.addWidget(publish_button)
 		return l

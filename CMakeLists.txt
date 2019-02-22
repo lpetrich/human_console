@@ -16,13 +16,13 @@ find_package(catkin REQUIRED COMPONENTS
 
 catkin_python_setup()
 
-generate_messages(
-  DEPENDENCIES
-)
+#generate_messages(
+#  DEPENDENCIES
+#)
 
 
 catkin_package(
-  INCLUDE_DIRS include
+  #INCLUDE_DIRS include
   #  LIBRARIES human_console
   CATKIN_DEPENDS message_runtime
   #  DEPENDS system_lib
